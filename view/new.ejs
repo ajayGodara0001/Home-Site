@@ -1,0 +1,56 @@
+<% layout('boilerplate') -%>
+<body>
+    <div class="row">
+    <div class="col-8 offset-2">
+        <br>
+    <h2>Create New List</h2>
+    <form  method="post" novalidate class="needs-validation" enctype="multipart/form-data" action="/listings">
+        <div class="mb-3">
+            <label for="title"class="form-label">Title:</label>
+            <input required type="text" class="form-control" name="title" placeholder="enter tilte">
+            <div class="invalid-feedback">
+                Please enter the title.
+              </div>
+        </div>
+        <div class="mb-3">
+            <label for="description"class="form-label">Description:</label>
+           <textarea  required class="form-control" name="description" ></textarea>
+           <div class="invalid-feedback">
+            Please enter description.
+          </div>
+        </div>
+        <div class="row">
+            <div class="mb-3 col-md-4" >
+                <label for="price"class="form-label">Price:</label>
+               <input required  name="price" placeholder="1222 " class="form-control">
+               <div class="invalid-feedback">
+                Price should be valid.
+              </div>
+            </div>
+            <div class="mb-3 col-md-8">
+                <label for="country"class="form-label">Country:</label>  
+                <input required  type="text" class="form-control" name="country" placeholder="USA">  
+                <div class="invalid-feedback">
+                    Please enter valid country.
+                  </div>  
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="location"class="form-label">Location:</label>  
+            <input required type="text" name="location" placeholder="New York" class="form-control">
+            <div class="invalid-feedback">
+                Please enter the Location.
+              </div>
+        </div>
+        <div class="mb-3">
+            <label for="image"class="form-label">Upload Image</label>         
+            <input type="file" class="form-control" name="image" >
+        </div>
+        <br>
+        <button class="btn btn-dark btn-add">ADD</button>
+        <br>
+        <br>
+    </form>
+</div>
+</div>
+</body>
