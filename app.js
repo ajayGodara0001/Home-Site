@@ -60,14 +60,14 @@ app.engine('ejs', ejsMate);
 app.use(express.static(path.join("./", "public")))
 
 
-
-
+import { allListingController } from "./controller/listing.controller.js"
+import { wrapApi } from "./utils/wrapApi.js"
 
 // import routes
 import listingRouter from "./routes/listing.route.js"
 import reviewRouter  from "./routes/review.route.js"
 import userRouter from "./routes/user.route.js"
-import { log } from "console"
+
 
 // session
 app.use(session(sessionOption))
@@ -96,6 +96,7 @@ app.use((req, res, next) => {
 app.use("/listings", listingRouter)
 app.use("/listings/:id/reviews", reviewRouter)
 app.use("/", userRouter)
+
 
 
 app.set('view engine', 'ejs');

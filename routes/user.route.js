@@ -11,8 +11,11 @@ import { loginPageController } from "../controller/user.controller.js"
 import { logoutController } from "../controller/user.controller.js"
 import { loginController } from "../controller/user.controller.js"
 
-
+import { allListingController } from "../controller/listing.controller.js"
 // routes
+router.route("/")
+    .get(wrapApi(allListingController))
+
 router.route("/signup")
     .get(signupPageController )
     .post(wrapApi(signupController))
